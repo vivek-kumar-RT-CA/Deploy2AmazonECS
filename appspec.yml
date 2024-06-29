@@ -1,0 +1,32 @@
+version: 0.0
+os: linux
+
+files:
+  - source: /ecs-task-definitions
+    destination: /ecs-task-definitions
+
+hooks:
+  BeforeInstall:
+    - location: scripts/prepare_task_definition.sh
+      timeout: 300
+      runas: ec2-user
+
+  ApplicationStop:
+    - location: scripts/stop_task.sh
+      timeout: 300
+      runas: ec2-user
+
+  AfterInstall:
+    - location: scripts/register_task_definition.sh
+      timeout: 300
+      runas: ec2-user
+
+  ApplicationStart:
+    - location: scripts/start_task.sh
+      timeout: 300
+      runas: ec2-user
+
+  ValidateService:
+    - location: scripts/validate_service.sh
+      timeout: 300
+      runas: ec2-user

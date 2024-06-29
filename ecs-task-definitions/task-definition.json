@@ -1,0 +1,17 @@
+{
+    "family": "my-task-definition",
+    "containerDefinitions": [
+      {
+        "name": "my-web-server",
+        "image": "my-docker-image:latest",
+        "essential": true,
+        "portMappings": [
+          {
+            "containerPort": 80,
+            "hostPort": 80
+          }
+        ]
+      }
+    ]
+  }
+  
