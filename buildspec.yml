@@ -19,4 +19,6 @@ phases:
       - echo Writing image definitions file...
       - printf '[{"name":"my-web-server","imageUri":"%s"}]' 891377322463.dkr.ecr.us-west-2.amazonaws.com/my-docker-image:latest > imagedefinitions.json
 artifacts:
-  files: imagedefinitions.json
+  files: 
+      - imagedefinitions.json
+      - appspec.yml
