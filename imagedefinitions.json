@@ -1,0 +1,6 @@
+[
+    {
+        "name": "my-app",
+        "imageUri": "891377322463.dkr.ecr.us-west-2.amazonaws.com/my-docker-image:latest"
+    }
+]
