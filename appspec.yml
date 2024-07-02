@@ -5,5 +5,5 @@ Resources:
       Properties:
         TaskDefinition: "my-app"
         LoadBalancerInfo:
-          ContainerName: "my-app"
+          ContainerName: "my-web-server"
           ContainerPort: 80
