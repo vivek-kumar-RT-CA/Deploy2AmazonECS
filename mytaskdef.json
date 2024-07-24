@@ -1,0 +1,49 @@
+{
+    "family": "my-task-definition01",
+    "containerDefinitions": [
+        {
+            "name": "my-web01",
+            "image": "891377322463.dkr.ecr.us-west-2.amazonaws.com/my-docker-image:latest",
+            "cpu": 0,
+            "memory": 1024,
+            "portMappings": [
+                {
+                    "name": "http-port80",
+                    "containerPort": 80,
+                    "hostPort": 80,
+                    "protocol": "tcp",
+                    "appProtocol": "http"
+                }
+            ],
+            "essential": true,
+            "environment": [],
+            "environmentFiles": [],
+            "mountPoints": [],
+            "volumesFrom": [],
+            "ulimits": [],
+            "logConfiguration": {
+                "logDriver": "awslogs",
+                "options": {
+                    "awslogs-group": "/ecs/my-task-definition01",
+                    "awslogs-create-group": "true",
+                    "awslogs-region": "us-west-2",
+                    "awslogs-stream-prefix": "ecs"
+                },
+                "secretOptions": []
+            },
+            "systemControls": []
+        }
+    ],
+    "taskRoleArn": "arn:aws:iam::891377322463:role/ecsTaskExecutionRole",
+    "executionRoleArn": "arn:aws:iam::891377322463:role/ecsTaskExecutionRole",
+    "networkMode": "bridge",
+    "requiresCompatibilities": [
+        "EC2"
+    ],
+    "cpu": "1024",
+    "memory": "1024",
+    "runtimePlatform": {
+        "cpuArchitecture": "X86_64",
+        "operatingSystemFamily": "LINUX"
+    }
+}
