@@ -3,7 +3,7 @@
     "containerDefinitions": [
         {
             "name": "my-web01",
-            "image": "891377322463.dkr.ecr.us-west-2.amazonaws.com/my-docker-image:latest",
+            "image": "<IMAGE1_NAME>",
             "cpu": 0,
             "memory": 1024,
             "portMappings": [
