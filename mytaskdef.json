@@ -1,8 +1,8 @@
 {
-    "family": "my-task-definition01",
+    "family": "my-task-definition02",
     "containerDefinitions": [
         {
-            "name": "my-web01",
+            "name": "my-web02",
             "image": "<IMAGE1_NAME>",
             "cpu": 0,
             "memory": 1024,
@@ -24,7 +24,7 @@
             "logConfiguration": {
                 "logDriver": "awslogs",
                 "options": {
-                    "awslogs-group": "/ecs/my-task-definition01",
+                    "awslogs-group": "/ecs/my-task-definition02",
                     "awslogs-create-group": "true",
                     "awslogs-region": "us-west-2",
                     "awslogs-stream-prefix": "ecs"
