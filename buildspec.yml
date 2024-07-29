@@ -4,7 +4,7 @@ phases:
   pre_build:
     commands:
       - echo Logging in to Amazon ECR...
-      - aws ecr get-login-password --region us-west-2 | docker login --username AWS --password-stdin 891377322463.dkr.ecr.us-west-2.amazonaws.com
+      - aws ecr get-login-password --region us-west-2 | docker login --username AWS --password-stdin 986672551393.dkr.ecr.us-west-2.amazonaws.com
   build:
     commands:
       - echo Build started on `date`
@@ -15,7 +15,7 @@ phases:
     commands:
       - echo Build completed on `date`
       - echo Pushing the Docker image...
-      - docker push 891377322463.dkr.ecr.us-west-2.amazonaws.com/my-docker-image:latest
+      - docker push 986672551393.dkr.ecr.us-west-2.amazonaws.com/aws-ecr-r4r-2040:latest
       - echo Writing image definitions file...
       - printf '[{"name":"my-web-server","imageUri":"%s"}]' 891377322463.dkr.ecr.us-west-2.amazonaws.com/my-docker-image:latest > imagedefinitions.json
 artifacts:
